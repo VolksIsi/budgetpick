@@ -1,0 +1,39 @@
+# AGENT.md - BudgetPick Master Context
+
+## 🎯 Project Overview
+**Name:** BudgetPick
+**Description:** A fully static, fast-loading, mobile-friendly Amazon affiliate website focusing on budget audio equipment (specifically microphones under $50).
+**Live URL:** [https://volksisi.github.io/budgetpick/](https://volksisi.github.io/budgetpick/)
+**Repository:** [https://github.com/VolksIsi/budgetpick](https://github.com/VolksIsi/budgetpick)
+**Amazon Associate ID:** `budgetpick21-20`
+
+## 📁 Project Structure
+The site is built entirely with vanilla HTML5 and CSS3. There are no build steps, no Node.js scripts required to run it, and no external framework dependencies.
+*   `index.html`: The homepage featuring the grid of all products.
+*   `styles.css`: Global stylesheet containing the design system (CSS variables, glassmorphism, responsive grid).
+*   `[product-id].html`: 20 individual product review pages (e.g., `fifine-k669b.html`).
+*   `blog.html`: The blog index.
+*   `[blog-slug].html`: 5 SEO-optimized blog articles regarding audio setups.
+*   `about.html` & `contact.html`: Standard static pages.
+*   `sitemap.xml` & `robots.txt`: Essential SEO routing files.
+*   `build_site.py` / `update_links.py` / `build_seo_site.py`: The temporary python generator scripts used to originally bootstrap and mass-update the files.
+
+## 📜 Agent Guidelines & Rules
+When assisting with this repository, **you MUST follow these rules:**
+
+1.  **Architecture:** Do NOT introduce external dependencies (e.g., Tailwind CSS via CDN, Bootstrap, React, Vue, jQuery). Stick to vanilla HTML and CSS.
+2.  **Design Language:** Maintain the "Glassmorphism" aesthetic (translucent dark backgrounds, subtle white borders, glowing accents) established in `styles.css`.
+3.  **Monetization:** Any new product links MUST use the Associate ID: `budgetpick21-20` and the format `https://www.amazon.com/dp/[ASIN]/?tag=budgetpick21-20`. Links should have `rel="nofollow noopener sponsored"`.
+4.  **SEO:** Every new page must include a `<title>`, meta `description`, `<link rel="canonical">`, and proper H1/H2 hierarchy. All pages must cross-link to relevant internal pages to pass link juice.
+5.  **Status Updates:** *CRITICAL RULE*: **After completing any meaningful change, feature addition, or task on this project, you must automatically update the "Changelog & Status" section of this `AGENT.md` file before finishing your session.**
+
+---
+
+## 🕒 Changelog & Status
+*Maintain a chronological record of changes here.*
+
+*   **[2026-02-24]** Initial Bootstrap: Created the foundational HTML/CSS structure, 20 unique product reviews, basic standard pages, sitemap, and robots.txt.
+*   **[2026-02-24]** Deployment: Initialized Git and successfully deployed the site to GitHub Pages automatically via tokens.
+*   **[2026-02-24]** Link Integration: Scraped real Amazon ASINs for all 20 microphones (finding functional counterparts for generic ones) and injected the specific `budgetpick21-20` associate ID into all buy buttons.
+*   **[2026-02-24]** SEO & Expansion: Regenerated the entire site to optimize Meta Titles, Meta Descriptions, and Canonical Tags. Implemented a dynamic "Related Microphones" section on product pages. Added a new 5-article interconnected Blog section.
+*   **[2026-02-24]** Context established: Created this `AGENT.md` file to maintain project directives, rules, and history. **(Current Status: Active and Live)**
