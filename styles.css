@@ -6,13 +6,16 @@
     --text-secondary: #cbd5e1;
     --accent: #3b82f6;
     --accent-hover: #2563eb;
-    --border: rgba(255, 255, 255, 0.1);
+    --border: rgba(255, 255, 255, 0.15);
+    --organic-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;500;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
@@ -40,8 +43,9 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: #fff;
     text-decoration: none;
     letter-spacing: -0.5px;
@@ -49,13 +53,19 @@ header {
 .logo span { color: var(--accent); }
 
 nav a {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
     color: var(--text-secondary);
     text-decoration: none;
     margin-left: 2rem;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 700;
+    transition: color 0.3s, transform 0.2s;
+    display: inline-block;
 }
-nav a:hover { color: var(--accent); }
+nav a:hover { 
+    color: var(--accent);
+    transform: rotate(-3deg) scale(1.1);
+}
 
 /* Hero Section */
 .hero {
@@ -65,7 +75,9 @@ nav a:hover { color: var(--accent); }
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-family: 'Caveat', cursive;
+    font-size: 4.5rem;
+    line-height: 1.1;
     margin-bottom: 1rem;
     background: linear-gradient(to right, #60a5fa, #a78bfa);
     -webkit-background-clip: text;
@@ -95,63 +107,80 @@ nav a:hover { color: var(--accent); }
 /* Glassmorphism Cards */
 .card {
     background: var(--card-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
-    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid var(--border);
+    border-radius: var(--organic-radius);
     padding: 1.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
 }
+
+/* Organic Asymmetry for Cards */
+.card:nth-child(even) { transform: rotate(1.5deg); }
+.card:nth-child(odd) { transform: rotate(-1deg); }
+.card:nth-child(3n) { transform: translateY(10px) rotate(0.5deg); }
+.card:nth-child(5n) { border-radius: 15px 225px 15px 255px/225px 15px 255px 15px; }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-8px) scale(1.02) rotate(0deg);
+    box-shadow: 8px 12px 0px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255,255,255,0.3);
 }
 
-.card h2 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff; }
-.card p { color: var(--text-secondary); margin-bottom: 1.5rem; flex-grow: 1; }
-.price { font-size: 1.5rem; font-weight: bold; color: var(--accent); margin-bottom: 1rem; }
+.card h2 { 
+    font-family: 'Caveat', cursive;
+    font-size: 2rem; 
+    margin-bottom: 0.5rem; 
+    color: #fff; 
+    line-height: 1.2;
+}
+.card p { color: var(--text-secondary); margin-bottom: 1.5rem; flex-grow: 1; font-size: 0.95rem; }
+.price { font-family: 'Caveat', cursive; font-size: 2rem; font-weight: bold; color: #60a5fa; margin-bottom: 1rem; }
 
 /* Buttons */
 .btn {
     display: inline-block;
-    background: var(--accent);
-    color: white;
+    background: transparent;
+    color: #fff;
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
+    border-radius: var(--organic-radius);
     text-decoration: none;
     font-weight: bold;
     text-align: center;
-    transition: background 0.3s, transform 0.2s;
-    border: none;
+    transition: all 0.3s;
+    border: 2px dashed rgba(255,255,255,0.4);
     cursor: pointer;
     width: 100%;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
 }
 .btn:hover {
-    background: var(--accent-hover);
-    transform: scale(1.02);
+    background: rgba(59, 130, 246, 0.2);
+    border-color: #60a5fa;
+    transform: rotate(-2deg) scale(1.05);
 }
 
 /* Article Page */
 .article-header {
     text-align: center;
-    padding: 4rem 2rem;
-    border-bottom: 1px solid var(--border);
+    padding: 5rem 2rem;
+    border-bottom: 2px dashed var(--border);
     background: radial-gradient(circle at top, rgba(59, 130, 246, 0.1), transparent 70%);
 }
-.article-header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #fff; }
+.article-header h1 { font-family: 'Caveat', cursive; font-size: 3.5rem; margin-bottom: 1rem; color: #fff; line-height: 1.1; }
 .article-header .price { font-size: 2rem; }
 
 .article-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 3rem 2rem;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
-.article-content h2 { margin: 2.5rem 0 1rem; color: #fff; }
-.article-content h3 { margin: 1.5rem 0 1rem; color: #e2e8f0; }
+.article-content h2 { font-family: 'Caveat', cursive; font-size: 2.5rem; margin: 3rem 0 1rem; color: #fff; }
+.article-content h3 { font-family: 'Caveat', cursive; font-size: 2rem; margin: 2rem 0 1rem; color: #e2e8f0; }
 .article-content p { margin-bottom: 1.5rem; color: var(--text-secondary); }
 .article-content ul { margin-bottom: 1.5rem; padding-left: 2rem; color: var(--text-secondary); }
 .article-content li { margin-bottom: 0.5rem; }
@@ -165,18 +194,19 @@ nav a:hover { color: var(--accent); }
 @media (max-width: 600px) {
     .pros-cons { grid-template-columns: 1fr; gap: 1rem; }
 }
-.pros { background: rgba(34, 197, 94, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(34, 197, 94, 0.2); }
-.cons { background: rgba(239, 68, 68, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(239, 68, 68, 0.2); }
+.pros { background: rgba(34, 197, 94, 0.1); padding: 1.5rem; border-radius: var(--organic-radius); border: 2px dashed rgba(34, 197, 94, 0.4); transform: rotate(-1deg); }
+.cons { background: rgba(239, 68, 68, 0.1); padding: 1.5rem; border-radius: var(--organic-radius); border: 2px dashed rgba(239, 68, 68, 0.4); transform: rotate(1deg); }
 .pros h3 { color: #4ade80; margin-top: 0; }
 .cons h3 { color: #f87171; margin-top: 0; }
 
 .cta-container {
     text-align: center;
-    margin: 3rem 0;
-    padding: 2rem;
+    margin: 4rem 0;
+    padding: 3rem 2rem;
     background: var(--card-bg);
-    border-radius: 16px;
-    border: 1px solid var(--border);
+    border-radius: var(--organic-radius);
+    border: 2px dashed rgba(255,255,255,0.3);
+    transform: rotate(-0.5deg);
 }
 
 /* Standard Pages */
