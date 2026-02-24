@@ -22,7 +22,7 @@ The site is built entirely with vanilla HTML5 and CSS3. There are no build steps
 When assisting with this repository, **you MUST follow these rules:**
 
 1.  **Architecture:** Do NOT introduce external dependencies (e.g., Tailwind CSS via CDN, Bootstrap, React, Vue, jQuery). Stick to vanilla HTML and CSS.
-2.  **Design Language:** Maintain the "Glassmorphism" aesthetic (translucent dark backgrounds, subtle white borders, glowing accents) established in `styles.css`.
+2.  **Design Language:** The site must maintain a clean, highly readable, and functional aesthetic inspired by professional review publications like The Wirecutter. Use a light theme (white/light gray background), high-contrast dark text (`#1f2937`), standard system fonts, clear solid buttons without gradients, and an absolute minimum of unnecessary animations. Do NOT use "Glassmorphism" or dark mode glows.
 3.  **Monetization:** Any new product links MUST use the Associate ID: `budgetpick21-20` and the format `https://www.amazon.com/dp/[ASIN]/?tag=budgetpick21-20`. Links should have `rel="nofollow noopener sponsored"`.
 4.  **SEO:** Every new page must include a `<title>`, meta `description`, `<link rel="canonical">`, and proper H1/H2 hierarchy. All pages must cross-link to relevant internal pages to pass link juice.
 5.  *CRITICAL RULE - Link Validation:* **At the start of ANY new session/task where you are modifying content, you MUST automatically verify all Amazon affiliate links on the site.** Ensure every link points to a valid ASIN and uses the correct `budgetpick21-20` associate ID. If broken links are found, correct them automatically, deploy the fixes, and document the results in the changelog.
