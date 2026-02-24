@@ -38,4 +38,6 @@ When assisting with this repository, **you MUST follow these rules:**
 *   **[2026-02-24]** Link Integration: Scraped real Amazon ASINs for all 20 microphones (finding functional counterparts for generic ones) and injected the specific `budgetpick21-20` associate ID into all buy buttons.
 *   **[2026-02-24]** SEO & Expansion: Regenerated the entire site to optimize Meta Titles, Meta Descriptions, and Canonical Tags. Implemented a dynamic "Related Microphones" section on product pages. Added a new 5-article interconnected Blog section.
 *   **[2026-02-24]** Context established: Created this `AGENT.md` file to maintain project directives, rules, and history. 
-*   **[2026-02-24]** Safety Rule Added: Implemented a new critical rule for automatic link verification (`budgetpick21-20`) at the start of all future agent sessions. **(Current Status: Active and Live)**
+*   **[2026-02-24]** Safety Rule Added: Implemented a new critical rule for automatic link verification (`budgetpick21-20`) at the start of all future agent sessions.
+*   **[2026-02-24]** Link Validation: Automatically verified all 20 Amazon affiliate links across the site at the start of the session. All links are correctly formatted and use the `budgetpick21-20` associate ID.
+*   **[2026-02-24]** Link Correction: Fixed the affiliate link for the Fifine K669B USB Microphone, updating the ASIN from the incorrect `B0DK8BMW2B` (Door Handle) to the correct `B06XCKGLTP`. **(Current Status: Active and Live)**
