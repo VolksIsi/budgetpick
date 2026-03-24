@@ -110,9 +110,9 @@ nav a:hover { color: var(--accent); }
     border-color: rgba(255,255,255,0.2);
 }
 
-.card h2 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff; }
-.card p { color: var(--text-secondary); margin-bottom: 1.5rem; flex-grow: 1; }
-.price { font-size: 1.5rem; font-weight: bold; color: var(--accent); margin-bottom: 1rem; }
+113: .card h2 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff; }
+114: .card p { color: var(--text-secondary); margin-bottom: 1.5rem; flex-grow: 1; }
+115: .price { font-size: 1.5rem; font-weight: bold; color: var(--accent); margin-bottom: 1rem; }
 
 /* Buttons */
 .btn {
