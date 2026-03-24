@@ -21,14 +21,16 @@ body {
 
 /* Glassmorphism Navbar */
 header {
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background 0.3s ease-in-out;
 }
+
 
 .nav-container {
     max-width: 1200px;
@@ -53,12 +55,16 @@ nav a {
     text-decoration: none;
     margin-left: 2rem;
     font-weight: 500;
-    transition: color 0.3s;
+nav a:focus, nav a:active {
+    color: var(--accent);
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.7);
+}
+
 }
 nav a:hover { color: var(--accent); }
 
 /* Hero Section */
-.hero {
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; color: #fff; font-weight: 800;
     text-align: center;
     padding: 6rem 2rem;
     background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 60%);
@@ -67,10 +73,11 @@ nav a:hover { color: var(--accent); }
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    background: linear-gradient(to right, #86B0FF, #A78BFA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 .hero p {
     font-size: 1.2rem;
@@ -96,18 +103,20 @@ nav a:hover { color: var(--accent); }
 .card {
     background: var(--card-bg);
     backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
+    border-radius: 20px;
+
     border-radius: 16px;
     padding: 1.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-}
+.card h2 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff; font-weight: 700; }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255,255,255,0.3);
+}
+
 }
 
 .card h2 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff; }
@@ -128,10 +137,11 @@ nav a:hover { color: var(--accent); }
     border: none;
     cursor: pointer;
     width: 100%;
-}
-.btn:hover {
-    background: var(--accent-hover);
+    background: linear-gradient(to right, var(--accent), var(--accent-hover));
     transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(40, 120, 255, 0.3);
+}
+.article-header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #fff; font-weight: 800; }
 }
 
 /* Article Page */
