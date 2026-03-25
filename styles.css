@@ -101,19 +101,19 @@ nav a:hover::after {
 }
 
 .site-header {
-  background-color: var(--header-bg);
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    background-color: var(--header-bg);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
 }
 
 .footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 0;
-  margin-top: 3rem;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9em;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
 }
 
 .grid .card {
