@@ -1,18 +1,44 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7; /* From patch 7 */
+  color: var(--text-color, #333);
+  background-color: #f4f4f4;
+  letter-spacing: 0.2px; /* From patch 7 */
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --header-bg: #ffffff;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --footer-bg: #333;
+  --footer-text-color: #fff;
+  --hover-text-color: var(--primary-color); /* From patch 10 and 7 */
+}
+
+/* Updated .card styles from patch 3 and 6 */
 .card {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* From patch 6 */
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15); /* From patch 3 and 6 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Consistent */
 }
 
 .card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 8px 16px rgba(0,0,0,.2);
+    transform: translateY(-5px) scale(1.02); /* Original */
+    box-shadow: 0 8px 16px rgba(0,0,0,.2); /* Original */
+}
+
+/* Updated nav styles from patch 4 */
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color, #333);
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
 }
 
 nav a::after {
@@ -23,14 +49,18 @@ nav a::after {
     display: block;
     margin-top: 5px;
     right: 0;
-    background: #007bff;
+    background: var(--primary-color, #007bff); /* From patch 4 */
     transition: width 0.3s ease;
     transform: scaleX(0);
     transform-origin: bottom left;
 }
 
+nav a:hover {
+    color: var(--hover-text-color, #007bff); /* From patch 4 */
+}
+
 nav a:hover::after {
-    transform: scaleX(1);
+    transform: scaleX(1); /* From patch 4 */
 }
 
 .btn {
@@ -46,9 +76,10 @@ nav a:hover::after {
     letter-spacing: 0.5px;
 }
 
+/* Updated .btn:hover styles from patch 5 */
 .btn:hover {
-    transform: translateY(-2px) scale(1.01);
-    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    transform: translateY(-3px) scale(1.03); /* From patch 5 */
+    box-shadow: 0 6px 12px rgba(0,0,0,.25); /* From patch 5 */
 }
 
 .hero {
@@ -59,27 +90,14 @@ nav a:hover::after {
   color: #fff;
 }
 
+/* Updated .hero h1 styles from patch 1 */
 .hero h1 {
-    background: none;
-    -webkit-background-clip: initial;
-    -webkit-text-fill-color: initial;
+    background: linear-gradient(to right, #868f96, #596167);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: none;
     font-size: 3.5em;
     line-height: 1.2;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-  --primary-color: #007bff;
-  --secondary-color: #0056b3;
-  --header-bg: #ffffff;
-  --card-bg: #ffffff;
-  --text-color: #333;
-  --footer-bg: #333;
-  --footer-text-color: #fff;
 }
 
 .site-header {
